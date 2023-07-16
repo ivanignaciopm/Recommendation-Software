@@ -4,9 +4,17 @@ data = [
 ['Attraction', 'Barrio Lastarria', '4', '4', 'José Victorino Lastarria, Santiago, Metropolitan Region'],
 ['Attraction', 'Mercado Central', '4', '4', 'San Pablo 967, Santiago, Metropolitan Region'],
 ['Attraction', 'Museo de Bellas Artes', '4', '4', 'Parque Forestal s/n, Santiago, Metropolitan Region'],
-['Restaurant', 'German Cuisine - Boragó', '5', '5', 'Nueva Costanera 3467, Vitacura'],
-['Restaurant', 'Contemporary Chilean Cuisine - Como Agua para Chocolate', '4', '4', 'Constitución 88, Providencia'],
-['Restaurant', 'Peruvian-Chilean Cuisine - Astrid y Gastón', '4', '4', 'Antonio Bellet 201, Providencia'],
-['Restaurant', 'Chilean Cuisine - Liguria', '4', '4', 'Loreto 110, Recoleta'],
-['Restaurant', 'Ancestral Chilean Cuisine - Peumayén Ancestral Food', '4', '4', 'Constitución 136, Providencia']
+['Restaurant', 'Cocina Alemana - Boragó', '5', '5', 'Nueva Costanera 3467, Vitacura'],
+['Restaurant', 'Cocina Contemporánea Chilena - Como Agua para Chocolate', '4', '4', 'Constitución 88, Providencia'],
+['Restaurant', 'Cocina Peruana-Chilena - Astrid y Gastón', '4', '4', 'Antonio Bellet 201, Providencia'],
+['Restaurant', 'Cocina Chilena - Liguria', '4', '4', 'Loreto 110, Recoleta'],
+['Restaurant', 'Cocina Ancestral Chilena - Peumayén Ancestral Food', '4', '4', 'Constitución 136, Providencia'],
+['Attraction', 'La Chascona', '4', '4', 'Fernando Márquez de la Plata 0192, Santiago'],
+['Attraction', 'Sky Costanera', '4', '4', 'Andrés Bello 2425, Providencia'],
+['Attraction', 'Centro Cultural La Moneda', '4', '4', 'Plaza de la Ciudadanía, Santiago'],
+['Attraction', 'Parque Metropolitano de Santiago', '5', '5', 'Santiago, Región Metropolitana'],
+['Restaurant', 'Nikkei Cuisine - Osaka', '4', '4', 'Isidora Goyenechea 3000, Las Condes'],
+['Restaurant', 'Thai Cuisine - Chang Thai', '4', '4', 'Constitución 47, Providencia'],
+['Restaurant', 'Mediterranean Cuisine - Bocanáriz', '4', '4', 'José Victorino Lastarria 276, Santiago'],
+['Restaurant', 'International Cuisine - Peumayén Bellavista', '4', '4', 'Constitución 136, Providencia']
 ]
