@@ -3,21 +3,61 @@ from data import *
 from tree import *
 
 def hello():
-  print("~~~<< Hello and welcome to your Santiago de Chile's Attractions Recommendation App >>~~~ \n ")
-  userinfo = input("First, tell me... Do you want to visit an interesting place or know the best restaurants in the zone? (type Attraction or Restaurant): ")
-  while userinfo.lower() != 'attraction' and userinfo.lower() != 'restaurant':
+  print("Hello and welcome to your Santiago de Chile's Attractions Recommendation App. \n ")
+  print("We will provide you some interesting info about what you can do based on the district you are right now!")
+  print("Hungry? Don't worry, we can also assist you with the best Restaurant's on the area!\n")
+  userinfo = input("First, tell me... Are you searching for Attractions, Restaurants or Both?: ")
+  while userinfo.lower() != 'attractions' and userinfo.lower() != 'restaurants' and userinfo != 'both'.lower():
     userinfo = input('Please type a valid word: ')
   return userinfo
 
-def importdata():
-  trees = {}
-  for sublist in data:
-    copia = sublist.copy()
-    name = copia[1].replace(' ','_').replace('á','a').lower()
-    treenode = Tree(copia)
-    trees[name] = treenode
-  return trees
+recommendtree = Tree('Recommendation')
+food_tree = Tree('Food Types')
+locations_tree = Tree('Locations')
+recoleta = Tree('Recoleta')
+providencia = Tree('Providencia')
+las_condes = Tree('Las Condes')
+vitacura = Tree('Vitacura')
+santiago = Tree('Santiago')
 
-sol = importdata()
-for ele in sol:
-    print(sol[ele])
+metropolitan = Tree('Metropolitan')
+alemana = Tree('Alemana')
+contemporanea_chilena = Tree('Contemporánea Chilena')
+peruana_chilena = Tree('Peruana-Chilena')
+chilena = Tree('Chilena')
+ancestral_chilena = Tree('Ancestral Chilena')
+japonesa = Tree('Japonesa')
+thai = Tree('Thai')
+mediterranea = Tree('Mediterranea')
+international = Tree('International')
+
+def tree_creation():
+  recommendtree.add_child(food_tree)
+  recommendtree.add_child(locations_tree)
+  locations_tree.add_child(recoleta)
+  locations_tree.add_child(providencia)
+  locations_tree.add_child(las_condes)
+  locations_tree.add_child(vitacura)
+  locations_tree.add_child(santiago)
+  locations_tree.add_child(metropolitan)
+  food_tree.add_child(alemana)
+  food_tree.add_child(contemporanea_chilena)
+  food_tree.add_child(peruana_chilena)
+  food_tree.add_child(chilena)
+  food_tree.add_child(ancestral_chilena)
+  food_tree.add_child(japonesa)
+  food_tree.add_child(thai)
+  food_tree.add_child(mediterranea)
+  food_tree.add_child(international)
+
+    
+user = hello()
+#for place in places:
+  #lower = place.lower().replace(' ','_')
+  #print(f"{lower} = Tree('{place}')")
+  #print(f'locations_tree.add_child({lower})')
+#for food in food_types:
+  #lower = food.lower().replace(' ','_')
+  #print(f"{lower} = Tree('{food}')")
+  #print(f'food_tree.add_child({lower})')
+

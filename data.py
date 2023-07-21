@@ -19,5 +19,5 @@ data = [
 ['Restaurant', 'International', 'Peumayén Bellavista', '5', '1', 'Constitución 136, Providencia']
 ]
 
-food_types = ['Alemana', 'Contemporánea Chilena', 'Peruana-Chilena', 'Chilena', 'Ancestral Chilena', 'Japonesa', 'Thai', 'Mediterraneana', 'International']
+food_types = ['Alemana', 'Contemporanea Chilena', 'Peruana_Chilena', 'Chilena', 'Ancestral Chilena', 'Japonesa', 'Thai', 'Mediterraneana', 'International']
 types1 = ['Attraction', 'Restaurant']
