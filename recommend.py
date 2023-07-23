@@ -14,21 +14,22 @@ def hello():
 recommendtree = Tree('Recommendation')
 food_tree = Tree('Food Types')
 locations_tree = Tree('Locations')
+
 recoleta = Tree('Recoleta')
 providencia = Tree('Providencia')
 las_condes = Tree('Las Condes')
 vitacura = Tree('Vitacura')
 santiago = Tree('Santiago')
-
 metropolitan = Tree('Metropolitan')
+
 alemana = Tree('Alemana')
-contemporanea_chilena = Tree('Contemporánea Chilena')
+contemporanea_chilena = Tree('Contemporánea-Chilena')
 peruana_chilena = Tree('Peruana-Chilena')
 chilena = Tree('Chilena')
-ancestral_chilena = Tree('Ancestral Chilena')
+ancestral_chilena = Tree('Ancestral-Chilena')
 japonesa = Tree('Japonesa')
 thai = Tree('Thai')
-mediterranea = Tree('Mediterranea')
+mediterranea = Tree('Mediterránea')
 international = Tree('International')
 
 def tree_creation():
@@ -50,8 +51,32 @@ def tree_creation():
   food_tree.add_child(mediterranea)
   food_tree.add_child(international)
 
-    
-user = hello()
+def locations_addchildren():
+  #adds locations to its father tree 
+  for location in locations_tree.children:
+    #print(location.value)
+    for info in data:
+      if info[0] == 'Restaurant':
+        if location.value in info[5]:
+          location.add_child(Tree(info))
+          #print('-' + info[2])
+          continue
+      if location.value in info[4]:
+        location.add_child(Tree(info))
+        #print('-' + info[1])
+
+def foods_addchildren():
+  for food in food_tree.children:
+    #print(food.value)
+    for info in data:
+      if info[0] == 'Restaurant':
+        if food.value in info[1]:
+          food.add_child(Tree(info))
+          #print('-' + info[2])
+
+tree_creation()   
+locations_addchildren()
+foods_addchildren()
 #for place in places:
   #lower = place.lower().replace(' ','_')
   #print(f"{lower} = Tree('{place}')")
