@@ -7,7 +7,7 @@ data = [
 ['Restaurant', 'Alemana', 'Boragó', '5', '5', 'Nueva Costanera 3467, Vitacura'],
 ['Restaurant', 'Contemporánea-Chilena', 'Cómo Agua para Chocolate', '4', '4', 'Constitución 88, Providencia'],
 ['Restaurant', 'Peruana-Chilena', 'Astrid y Gastón', '4', '4', 'Antonio Bellet 201, Providencia'],
-['Restaurant', 'Chilena', 'Liguria', '2', '4', 'Loreto 110, Recoleta'],
+['Restaurant', 'Chilena Tradicional', 'Liguria', '2', '4', 'Loreto 110, Recoleta'],
 ['Restaurant', 'Ancestral-Chilena', 'Peumayén Ancestral Food', '4', '4', 'Constitución 136, Providencia'],
 ['Attraction', 'La Chascona', '5', '4', 'Fernando Márquez de la Plata 0192, Santiago'],
 ['Attraction', 'Sky Costanera', '3', '4', 'Andrés Bello 2425, Providencia'],
@@ -18,6 +18,3 @@ data = [
 ['Restaurant', 'Mediterránea', 'Bocanáriz', '4', '4', 'José Victorino Lastarria 276, Santiago'],
 ['Restaurant', 'International', 'Peumayén Bellavista', '5', '1', 'Constitución 136, Providencia']
 ]
-
-food_types = ['Alemana', 'Contemporanea Chilena', 'Peruana_Chilena', 'Chilena', 'Ancestral Chilena', 'Japonesa', 'Thai', 'Mediterraneana', 'International']
-types1 = ['Attraction', 'Restaurant']
