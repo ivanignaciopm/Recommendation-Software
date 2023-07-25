@@ -89,6 +89,7 @@ def recommend():
           if userlocation.lower() in location.value.lower():
             result.append(location.value)
         if len(result) == 0:
+          print('\n')
           for caca in locations_tree.children:
             print(caca.value)
           userlocation = input('\nThese are the locations available for search, Try again:\n')
@@ -117,15 +118,17 @@ def recommend():
           while ans.lower() != 'yes' and ans.lower() != 'no':
             ans = input('\nType yes or no:\n')
           if ans == 'yes':
-            print(matchesrestaurants)
+            for restaurant in matchesrestaurants:
+             print(f'\n{restaurant.value[2]}:\n - Food type: {restaurant.value[1]} \n - Food Rating: {restaurant.value[3]}\n - Attention: {restaurant.value[4]}\n - Adress: {restaurant.value[5]}\n')
         else:
-          print(matchesattractions)
+          for attraction in matchesattractions:
+           print(f'{attraction.value[1]}:\n - General Rating: {attraction.value[2]}\n - Attention: {attraction.value[3]}\n - Adress: {attraction.value[4]}\n')
 
   if userinfo.lower() == 'r':
     userfood = input('\nNice!, what type of food are you searching for?\n')
     normalized =  userfood.replace('á','a').replace('é','e').replace('ó','o').lower()
     result = []
-    while len(result) != 1:
+    while len(result) < 1:
       for food in food_tree.children:
         normfood = food.value.replace('á','a').replace('é','e').replace('ó','o').lower()
         if normalized in normfood:
@@ -139,26 +142,32 @@ def recommend():
           if normalized in normfood:
             result.append(food.value)
         if len(result) == 0:
+          print('\n')
           for food in food_tree.children:
             print(food.value)
-          userfood = input('\nThese are the locations available for search, Try again:\n')
+          userfood = input("\nThese are the locations available for search, Try again:\n")
           normalized =  userfood.replace('á','a').replace('é','e').replace('ó','o').lower()
 
       if len(result) > 1:
         print('\nThese are the matches with the answer you provided:\n')
         for loca in result:
           print(loca)
-        userfood = input('\nPlease choose one of them:\n')
-        normalized =  userfood.replace('á','a').replace('é','e').replace('ó','o').lower()
-        result = []
+        answer = input("\nType 'Yes' if you want to check the info for all of them, otherwise type 'No' to do a more specific search\n")
+        if answer.lower() == 'no':
+            userfood = input('\nWhat type of food are you looking for:\n')
+            normalized =  userfood.replace('á','a').replace('é','e').replace('ó','o').lower()
+            result = []
+        while answer.lower() != 'yes' and answer.lower() != 'no':
+            answer = input('\nTry again:\n')
 
-    print(f'\nThe restaurants available of {result[0]} food are:')
-    for food in food_tree.children:
-      if food.value == result[0]:
-        matches = food.children
-        for restaurant in matches:
-          if len(restaurant.value) != 0:
-           print(f'\n{restaurant.value[2]}:\n - Food type:{ restaurant.value[1]} \n - Food Rating:{ restaurant.value[3]}\n - Attention:{ restaurant.value[4]}\n - Adress:{ restaurant.value[5]}\n')
+    for restaurant in result:
+      print(f'\nThe restaurants available of {restaurant} food are:')
+      for food in food_tree.children:
+        if food.value == restaurant:
+          matches = food.children
+          for resta in matches:
+            if len(resta.value) != 0:
+             print(f'{resta.value[2]}:\n - Food type: {resta.value[1]} \n - Food Rating: {resta.value[3]}\n - Attention: {resta.value[4]}\n - Adress: {resta.value[5]}\n')
   again = input('\nDo you want to search for anything else:\n')
   if again.lower() == 'yes':
     recommend()
